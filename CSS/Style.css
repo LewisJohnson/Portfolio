@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+* ::selection {
+    background: #51fdff;
+}
+
+p {
+    color: #111111;
+}
+
+.body {
+    margin: 0;
+}
+
+.nav-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 33rem;
+    overflow: hidden;
+}
+
+.nav-image h1 {
+    position: absolute;
+    font-weight: 300;
+    font-size: 6rem;
+    color: #ffffff;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.nav-image img{
+    width: 100%;
+    min-height: 40rem;
+    top: -6rem;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.colour-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 33rem;
+    background: rgba(0, 2, 32, 0.7);
+    z-index: 1;
+
+}
+
+.image-overlay{
+    background:url(
+    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAOklEQVQYV2NkIAIwElLz//9/SbyKwAoYGZ8TNAlkE1ZFMBNgTsFQhK4Ap0nonoGbhM0EFOvwKQApBAC4jBcgvUbaUQAAAABJRU5ErkJggg==
+    ) repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 33rem;
+    z-index: 1;
+}
+.main-content {
+    position: relative;
+    padding: 2rem;
+    margin: 2rem;
+    position: relative;
+    top: 30rem;
+}
+
+.card {
+    border-radius: 3px;
+    background: #fff;
+    max-width: 1200px;
+    display: block;
+    margin: 3rem auto 0;
+    overflow: hidden;
+}
+
+
+.card h1 {
+    font-weight: 300;
+    padding-bottom: 0;
+}
+
+.card h2 {
+    font-weight: 100;
+    padding-left: 4rem;
+    padding-top: 0;
+    margin: 0;
+}
+
+.card a {
+    position: relative;
+    top: -1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.card p {
+    text-align: justify;
+    padding: 0 1rem 1rem;
+    font-weight: 300;
+}
+
+/* Mobile Header */
+.nav-bar-mobile{
+    position: fixed;
+    background: black;
+    z-index: 3;
+    height: 100%;
+    width: 20rem;
+    left: 100%;
+    margin-top: -30px;
+    margin-left: 0;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    border-left: 2px solid white;
+}
+
+.nav-bar-mobile.open{
+    margin-left: -250px;
+}
+
+.hamburger-btn {
+    position: fixed;
+    padding: 0.7rem;
+    cursor: pointer;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -60px;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.hamburger-btn div {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 5px;
+    transition: all 0.3s ease, visibility 1ms;
+    -o-transition: all 0.3s ease, visibility 1ms;
+    -moz-transition: all 0.3s ease, visibility 1ms;
+    -webkit-transition: all 0.3s ease, visibility 1ms;
+}
+
+.ham_1.on {
+    top: 8px;
+}
+
+.ham_2.on {
+    opacity: 0;
+}
+
+.ham_3.on {
+    top: -8px;
+}
+
+.nav-bar-mobile-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    background: transparent;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    display: none;
+}
+/* Header */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 330px;
+    z-index: 2;
+    transition: margin, background 0.3s ease;
+    -o-transition: margin, background 0.3s ease;
+    -moz-transition: margin, background 0.3s ease;
+    -webkit-transition: margin, background 0.3s ease;
+}
+
+.nav-bar ul {
+    margin: 0;
+    overflow: hidden;
+}
+.nav-bar ul li{
+    margin: 0;
+    display: inline-block;
+    float: right;
+}
+
+.nav-bar ul li a {
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 2rem 1.2rem;
+    margin: 0;
+    -o-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.nav-bar ul >  :first-child a{
+    padding: 0.7rem 6.1rem 2rem 1.5rem;
+    margin: 1.2rem 1rem 1rem;
+    border: 2px solid white;
+    max-width: 100px;
+    max-height: 30px;
+}
+
+.nav-bar ul >  :first-child :hover{
+    background: white;
+}
+
+.nav-bar ul > :last-child{
+    position: fixed;
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin: 1rem 0 0 -1rem;
+}
+
+.nav-bar ul > :last-child div :first-child{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-bar ul > :last-child div :last-child{
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0;
+}
+
+.nav-bar ul li a:hover {
+    color: #818181;
+}
+
+.selected a {
+    color: #b9b9b9 !important;
+}
+
+.nav-bar-ul .selected a:hover {
+    color: #dadada !important;
+}
+
+@media screen and (min-width: 701px) {
+    .hamburger-btn {
+        display: none
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .nav-bar{
+        position: fixed;
+        cursor: pointer;
+        left: 100%;
+        margin-top: 10px;
+        z-index: 4;
+    }
+
+    .nav-bar ul{
+        height: 20rem;
+    }
+
+    .nav-bar ul li {
+        position: relative;
+        margin: 0;
+        display: block;
+        float: none;
+        top: 5rem;
+        left: -2rem;
+    }
+
+    .nav-bar ul li a {
+        color: white;
+        display: block;
+        padding: 0.5rem 0;
+        margin: 0;
+    }
+
+    .nav-bar ul > :last-child{
+        display: block;
+        top: 0;
+        left: 2rem;
+    }
+
+    .nav-image img{
+        width: 300%;
+        left: -50%;
+        top: 0%;
+    }
+
+    .nav-image h1 {
+        font-size: 4rem;
+    }
+
+    .card {
+        margin: 1rem;
+    }
+
+    .nav-bar-mobile-overlay{
+        display: block;
+    }
+}
+
+
