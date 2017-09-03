@@ -1,27 +1,16 @@
-/**
- *  +---------------------------------------------------+
- *  |               MADE BY                             |
- *  |                 LEWIS JOHNSON                     |
- *  |                                       12/01/2016  |
- *  +---------------------------------------------------+
- */
-
-var nav_bar_ul = null;
-var ham_el1 = null;
-var ham_el2 = null;
-var ham_el3 = null;
+var nav_bar_ul, ham_el1, ham_el2, ham_el3;
 
 $(document).ready(function () {
-
     var hamburger_hidden = true;
-
 
     ham_el1 = $('.ham_1');
     ham_el2 = $('.ham_2');
     ham_el3 = $('.ham_3');
     nav_bar_ul = $("#nav-bar-ul");
+
     hello();
     developer();
+
     //Toggle Hamburger Menu
     $('#hamburger').click(HamburgerToggle);
 
@@ -104,6 +93,16 @@ $(document).ready(function () {
         }
 
     });
+
+    var lang_stats = document.getElementsByClassName('language-stats');
+    for (var i = 0; i < lang_stats.length; ++i) {
+        var list = lang_stats[i];
+
+        for (var j = 0; j < list.children.length; j++)
+        {
+            list.children[j].style.width = list.children[j].dataset.percentage;
+        }
+    }
 });
 
 
@@ -161,5 +160,3 @@ jQuery.fn.rotate = function (degrees) {
     });
     return $(this);
 };
-
-

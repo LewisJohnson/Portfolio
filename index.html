@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="CSS/Style.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:1000,300,400,500,700' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lewis Johnson</title>
 
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="JS/Main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:1000,300,400,500,700' rel='stylesheet' type='text/css'>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="main.js"></script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            "name": "Lewis Johnson",
+            "jobTitle": "Software Developer",
+            "telephone": "07762097588",
+            "url": "http://lewisdavidjohnson.com",
+            "email": "lewisjohnsondev@gmail.com"
+        }
+    </script>
 </head>
-
-<body class="body">
-
-<div class="colour-overlay"></div>
-<div class="image-overlay"></div>
-
-<div class="nav-image">
-    <img draggable="false" src="Assets/TestGif.gif">
-    <h1 id="title-text">Lewis Johnson</h1>
-</div>
 
 <!-- Mobile Slider -->
 <nav class="nav-bar-mobile">
@@ -37,50 +39,90 @@
 
     <ul id="nav-bar-ul">
         <li><a href="contact.html">CONTACT</a></li>
-        <li><a href="about.html">ABOUT</a></li>
         <li><a href="projects.html">PROJECTS</a></li>
         <li class="selected"><a href="index.html">HOME</a></li>
-        <li><div><a id="header-name-top" href="index.html">SOFTWARE</a> <a  href="index.html">DEVELOPER</a></div></li>
+        <li>
+            <div><a id="header-name-top" href="index.html">SOFTWARE</a> <a href="index.html">DEVELOPER</a></div>
+        </li>
     </ul>
 </nav>
 
-<div class="main-content">
+<body class="body">
 
-    <div class="card">
-        <h1 id="hello">System.GetString("Hello");</h1>
+<div class="colour-overlay"></div>
+<div class="image-overlay"></div>
 
-        <p>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox
-            whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab
-            quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting
-            zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly
-            daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs! "Now
-            fax quiz Jack! " my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W.
-            zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls.</p>
-
-        <p>Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra,
-            and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A
-            wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy! ", Alex Trebek's fun TV quiz game. Woven silk
-            pyjamas exchanged for blue quartz. Brawny gods just flocked up to quiz and vex him. Adjusting quiver and
-            bow, Zompyc[1] killed the fox. My faxed joke won a pager in the cable TV quiz show. Amazingly few
-            discotheques provide jukeboxes. My girl wove six dozen plaid jackets before she quit. Six big devils from
-            Japan quickly forgot how to waltz. Big July earthquakes confound zany experimental vow.</p>
-
-        <p>Foxy parsons quiz and cajole the lovably dim wiki-girl. Have a pick: twenty six letters - no forcing a
-            jumbled quiz! Crazy Fredericka bought many very exquisite opal jewels. Sixty zippers were quickly picked
-            from the woven jute bag. A quick movement of the enemy will jeopardize six gunboats. All questions asked by
-            five watch experts amazed the judge. Jack quietly moved up front and seized the big ball of wax. The quick,
-            brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps.
-            Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived
-            waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex
-            bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft
-            jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs! "Now fax
-            quiz Jack! " my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps
-            Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized
-            the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack!
-            Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV</p>
-    </div>
-
+<div class="nav-image">
+    <img draggable="false" src="Assets/TestGif.gif">
+    <h1 id="title-text">Lewis Johnson</h1>
 </div>
 
+
+<div class="main-content">
+    <div class="card">
+        <h1 id="hello">System.GetString("Hello");</h1>
+        <p>
+            Hello, I'm Lewis Johnson. I'm a student at the University of Sussex currently studying computer science in
+            my final
+            year.
+            I'm currently employed as a full stack web developer at <a href="https://www.loulaanddeer.co.uk">Loula and
+            Deer</a> in Brighton, UK.
+            If you are interested, there is a list of personal projects and open source contributions for you to browse
+            at the bottom of the page.
+            <br><br>
+            Programming has been my passion for a seriously long time, so I have many years of experience in multiple
+            programming languages.
+            I have apps published on the Windows 8 and 10 store (Mobile &amp; Desktop), and Google Play store.
+            I have attended a fair few hackathons/competitions and placed well in every one I've attended.
+            <br><br>
+            If you feel like getting in touch with me, for any reason, including obtaining a copy of my CV, send me an
+            email or give me a call.
+        </p>
+    </div>
+
+    <div class="card">
+        <h1>Curriculum Vitae.</h1>
+        <p>A copy of my CV is available on request.</p>
+    </div>
+
+    <div class="card">
+        <h1>Experience.</h1>
+        <h3>I have plenty of experience with:</h3>
+        <ul>
+            <li>Web development (CSS, HTML. JQuery, etc..)</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>Modern C++</li>
+            <li>Python 3.X</li>
+            <li>Unity3D</li>
+            <li>Unreal Engine</li>
+        </ul>
+        <h3>I'm familiar with:</h3>
+        <ul>
+            <li>Python 2.7</li>
+            <li>F#</li>
+            <li>ASP.NET</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h1>Achievements.</h1>
+        <div class="section-content">
+            <ul class="experience">
+                <li><a href="http://www.ewbchallenge.org/">Engineers Without Borders | Finalist</a></li>
+                <li><a href="http://www.sussex.ac.uk/ei/internal/forstudents/globaldesignchallenge">Sussex Global Design
+                    Challenge | Winner 2016</a></li>
+                <li><a href="http://www.autodesk.co.uk/training-and-certification/certification">Autodesk Maya 2015 |
+                    Certified Professional</a></li>
+                <li>
+                    <a href="https://www.worldskillsuk.org/worldskills-uk-competitions/find-a-competition/media-and-creative/3d-digital-game-art">Programmr
+                        London Hackathon | 2nd Place</a></li>
+                <li><a href="http://www.programmr.com/hired_london_hackathon">World Skills 3D modelling | 3rd Place</a>
+                </li>
+                <li>Published apps on the Windows Store</li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>
