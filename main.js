@@ -1,4 +1,15 @@
-var nav_bar_ul, ham_el1, ham_el2, ham_el3;
+var nav_bar_ul, ham_el1, ham_el2, ham_el3, header_dev_text;
+
+var arrindex = 0;
+var languageList = [
+    "SOFTWARE",
+    "C#",
+    ".NET",
+    "JAVA",
+    "UNITY",
+    "C++",
+    "WEB"
+];
 
 $(document).ready(function () {
     var hamburger_hidden = true;
@@ -8,7 +19,6 @@ $(document).ready(function () {
     ham_el3 = $('.ham_3');
     nav_bar_ul = $("#nav-bar-ul");
 
-    hello();
     developer();
 
     //Toggle Hamburger Menu
@@ -103,36 +113,26 @@ $(document).ready(function () {
             list.children[j].style.width = list.children[j].dataset.percentage;
         }
     }
+
+    var helloHeader = $("#hello");
+    if(helloHeader !== null){
+        hello();
+    }
+
+    function hello() {
+        if ($(helloHeader).text().length === 8) {
+            $(helloHeader).text("hello...|");
+        } else {
+            $(helloHeader).text("hello...");
+        }
+        setTimeout(hello, 500);
+    }
 });
 
-
-var lol = true;
-function hello() {
-    if (lol) {
-        lol = false;
-        $("#hello").text("hello...");
-    } else {
-        lol = true;
-        $('#hello').text("hello...|");
-    }
-    setTimeout(hello, 500);
-}
-
-var arrindex = 0;
-var iThinkiKnowTheseLanguages = [
-    "SOFTWARE",
-    "C#",
-    ".NET",
-    "JAVA",
-    "UNITY",
-    "C++",
-    "WEB"
-];
-var header_dev_text = null;
 function developer() {
     header_dev_text = $('#header-name-top');
-    header_dev_text.text(iThinkiKnowTheseLanguages[arrindex]);
-    if (iThinkiKnowTheseLanguages.length - 1 != arrindex) {
+    header_dev_text.text(languageList[arrindex]);
+    if (languageList.length - 1 !== arrindex) {
         arrindex++;
     }
     else {

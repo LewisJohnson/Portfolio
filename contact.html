@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:1000,300,400,500,700' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lewis Johnson</title>
 
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:1000,300,400,500,700' rel='stylesheet' type='text/css'>
+
+    <script src="jquery-3.2.1.min.js"></script>
     <script src="main.js"></script>
-    <script src="https://use.fontawesome.com/521db7705a.js" async="async"></script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            "name": "Lewis Johnson",
+            "jobTitle": "Software Developer",
+            "telephone": "07762097588",
+            "url": "http://lewisdavidjohnson.com",
+            "email": "lewisjohnsondev@gmail.com"
+        }
+    </script>
 </head>
 
 <body class="body">
 
-<div class="colour-overlay"></div>
-<div class="image-overlay"></div>
-
-<div class="nav-image">
-    <img draggable="false" src="Assets/TestGif.gif">
-    <h1 id="title-text">Lewis Johnson</h1>
+<div class="header">
+    <div class="colour-overlay"></div>
+    <div class="image-overlay"></div>
+    <div class="nav-image">
+        <img draggable="false" src="assets/TestGif.gif">
+        <h1 id="title-text">Contact</h1>
+    </div>
 </div>
+
 
 
 <!-- Mobile Slider -->
@@ -30,7 +44,6 @@
 </nav>
 
 <nav class="nav-bar">
-
     <div class="hamburger-btn" id="hamburger">
         <div class="ham_1"></div>
         <div class="ham_2"></div>
@@ -41,10 +54,12 @@
         <li class="selected"><a href="contact.html">CONTACT</a></li>
         <li><a href="projects.html">PROJECTS</a></li>
         <li><a href="index.html">HOME</a></li>
-        <li>
-            <div><a id="header-name-top" href="index.html">SOFTWARE</a> <a href="index.html">DEVELOPER</a></div>
-        </li>
     </ul>
+
+    <div class="language-ticker">
+        <p id="header-name-top">SOFTWARE</p>
+        <p>DEVELOPER</p>
+    </div>
 </nav>
 
 <div class="main-content">
@@ -52,7 +67,7 @@
     <div class="card">
         <h1>Contact Me</h1>
 
-        <ul class="section-social">
+        <ul class="contact-list">
             <li class="border smooth">
                 <a href="mailto:lewisjohnsondev@gmail.com?Subject=-SUBJECT%20(From%20portfolio%20website)">
                     <i class="fa fa-envelope" aria-hidden="true"></i>

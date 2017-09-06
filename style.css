@@ -11,7 +11,7 @@ p {
     color: #111111;
 }
 
-ul{
+ul {
     margin: 0;
     padding: 0;
 }
@@ -20,13 +20,17 @@ ul{
     margin: 0;
 }
 
+.header {
+    height: 33rem;
+}
+
 .nav-image {
     position: absolute;
     top: 0;
     left: 0;
     margin: 0;
     width: 100%;
-    height: 33rem;
+    height: inherit;
     overflow: hidden;
 }
 
@@ -42,9 +46,6 @@ ul{
     left: 50%;
     transform: translate(-50%, 50%);
     transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
 }
 
 .nav-image img {
@@ -52,10 +53,6 @@ ul{
     min-height: 40rem;
     top: -6rem;
     position: relative;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -65,10 +62,9 @@ ul{
     left: 0;
     margin: 0;
     width: 100%;
-    height: 33rem;
+    height: inherit;
     background: rgba(0, 2, 32, 0.7);
     z-index: 1;
-
 }
 
 .image-overlay {
@@ -80,7 +76,7 @@ ul{
     left: 0;
     margin: 0;
     width: 100%;
-    height: 33rem;
+    height: inherit;
     z-index: 1;
 }
 
@@ -111,8 +107,14 @@ ul{
 
 .card a {
     color: black;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
+    transition: all 0.3s;
+}
+
+.card a:hover {
+    color: #8b0008;
+    font-weight: 600;
 }
 
 .card p {
@@ -129,12 +131,7 @@ ul{
     height: 100%;
     width: 20rem;
     left: 100%;
-    margin-top: -30px;
-    margin-left: 0;
     transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
     border-left: 2px solid white;
 }
 
@@ -150,9 +147,6 @@ ul{
     margin-top: 10px;
     margin-left: -60px;
     transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
 }
 
 .hamburger-btn div {
@@ -162,9 +156,6 @@ ul{
     background: white;
     margin-top: 5px;
     transition: all 0.3s ease, visibility 1ms;
-    -o-transition: all 0.3s ease, visibility 1ms;
-    -moz-transition: all 0.3s ease, visibility 1ms;
-    -webkit-transition: all 0.3s ease, visibility 1ms;
 }
 
 .ham_1.on {
@@ -187,9 +178,6 @@ ul{
     width: 100%;
     background: transparent;
     transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
     display: none;
 }
 
@@ -202,9 +190,6 @@ ul{
     max-height: 330px;
     z-index: 2;
     transition: margin, background 0.3s ease;
-    -o-transition: margin, background 0.3s ease;
-    -moz-transition: margin, background 0.3s ease;
-    -webkit-transition: margin, background 0.3s ease;
 }
 
 .nav-bar ul {
@@ -227,9 +212,6 @@ ul{
     display: block;
     padding: 2rem 1.2rem;
     margin: 0;
-    -o-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -245,68 +227,53 @@ ul{
     background: white;
 }
 
-.nav-bar ul > :last-child {
+.language-ticker {
+    top: 0;
+    left: 0;
     position: fixed;
-    float: left;
-    padding: 0;
-    margin: 1rem 0 0 -1rem;
+    font-weight: 400;
+    padding-top: 1.2rem;
+    padding-left: 2rem;
 }
 
-.nav-bar ul > :last-child div :first-child {
-    font-size: 1.2rem;
-    font-weight: 400;
+.language-ticker p {
+    color: white;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
+    transition: 0.3s opacity;
 }
 
-.nav-bar ul > :last-child div :last-child {
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding: 0;
+.nav-bar ul li.selected a {
+    color: #b9b9b9;
 }
 
-.nav-bar ul li a:hover {
-    color: #818181;
-}
-
-.selected a {
-    color: #b9b9b9 !important;
-}
-
-.nav-bar-ul .selected a:hover {
-    color: #dadada !important;
-}
-
-
-
-.featured-projects {
+.projects {
     display: flex;
+    flex-flow: wrap;
 }
 
-.featured-projects li {
+.projects > li {
     width: 50%;
     display: inline-block;
     padding: 10px;
 }
 
-.featured-projects li h1 {
+.projects li h1 {
     white-space: nowrap;
     margin-bottom: 5px;
 }
 
-.featured-projects li h2 {
+.projects li h2 {
     padding: 0 0 10px;
     font-weight: 300;
     font-size: 18px;
 }
 
-.featured-projects li h3 {
+.projects li h3 {
     text-align: center;
     font-weight: 300;
 }
 
-.featured-projects p {
+.projects p {
     padding: 0;
 }
 
@@ -390,6 +357,28 @@ ul.source-stats li h2 {
     height: 100%;
 }
 
+/* Contact */
+
+.contact-list{
+    list-style: none;
+}
+
+.contact-list li {
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.contact-list a{
+    display: block;
+    padding: 1rem;
+}
+
+.contact-list li a p{
+    padding: 0;
+    margin: 0;
+}
+
 @media screen and (min-width: 701px) {
     .hamburger-btn {
         display: none
@@ -407,39 +396,32 @@ ul.source-stats li h2 {
     }
 
     .nav-bar ul {
-        height: 20rem;
+        margin-top: 5rem;
     }
 
     .nav-bar ul li {
-        position: relative;
-        margin: 0;
         display: block;
         float: none;
-        top: 5rem;
-        left: -2rem;
+    }
+
+    .nav-bar ul > :first-child a{
+        margin-left: 0;
     }
 
     .nav-bar ul li a {
-        color: white;
         display: block;
         padding: 0.5rem 0;
         margin: 0;
     }
 
-    .nav-bar ul > :last-child {
-        display: block;
-        top: 0;
-        left: 2rem;
-    }
-
     .nav-image img {
         width: 300%;
-        left: -50%;
-        top: 0;
+        left: -126vw;
+        top: -22%;
     }
 
     .nav-image h1 {
-        font-size: 4rem;
+        top: 0;
     }
 
     .card {
@@ -451,23 +433,25 @@ ul.source-stats li h2 {
     }
 
     /* Fix that shit up there */
-
-    .main-content{
+    .main-content {
         padding: 0;
     }
 
+    .header {
+        height: 20rem;
+    }
+
     /* Project page */
-    .featured-projects {
+    .projects {
         display: flex;
         flex-flow: column;
     }
 
-    .featured-projects li {
+    .projects li {
         width: 100%;
         display: block;
         padding: 0;
     }
-
 
 }
 
