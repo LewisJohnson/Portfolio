@@ -34,10 +34,10 @@ $(document).ready(function () {
     });
 
     function hideHamburgerMenu() {
-        $(".nav-bar-mobile").toggleClass("open");
+        $(".nav-mobile").toggleClass("open");
 
         $('#hamburger').css("margin-left", '-60px');
-        $(".nav-bar").css("margin-left", '0px');
+        $(".nav-desktop").css("margin-left", '0px');
 
         //Animate hamburger divs
         ham_el1.rotate(0);
@@ -61,8 +61,8 @@ $(document).ready(function () {
         ham_el3.toggleClass("on");
 
         $('#hamburger').css("margin-left", '-250px');
-        $(".nav-bar").css("margin-left", '-220px');
-        $(".nav-bar-mobile").toggleClass("open");
+        $(".nav-desktop").css("margin-left", '-220px');
+        $(".nav-mobile").toggleClass("open");
 
         hamburger_hidden = false;
     }
@@ -93,11 +93,11 @@ $(document).ready(function () {
         }
 
         if(height > 443) {
-            $(".nav-bar").css("background", 'black');
+            $(".nav-desktop").css("background", 'black');
             $(".nav-bar-mobile-overlay").css("background", 'black');
         }
          else{
-            $(".nav-bar").css("background", 'transparent');
+            $(".nav-desktop").css("background", 'transparent');
             $(".nav-bar-mobile-overlay").css("background", 'transparent');
         }
 

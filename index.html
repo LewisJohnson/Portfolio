@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto:1000,300,400,500,700' rel='stylesheet' type='text/css'>
 
-    <script src="jquery-3.2.1.min.js"></script>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
     <script src="main.js"></script>
 
     <script type="application/ld+json">
@@ -26,17 +26,23 @@
 </head>
 
 <!-- Mobile Slider -->
-<nav class="nav-bar-mobile">
-    <div class="nav-bar-mobile-overlay"></div>
-</nav>
-
-<nav class="nav-bar">
+<nav class="nav-mobile">
     <div class="hamburger-btn" id="hamburger">
         <div class="ham_1"></div>
         <div class="ham_2"></div>
         <div class="ham_3"></div>
     </div>
 
+    <div class="nav-bar-mobile-overlay"></div>
+
+    <ul id="nav-bar-mobile-ul">
+        <li><a href="#Contact">CONTACT</a></li>
+        <li><a href="#Projects">PROJECTS</a></li>
+        <li class="selected"><a href="#home">HOME</a></li>
+    </ul>
+</nav>
+
+<nav class="nav-desktop">
     <ul id="nav-bar-ul">
         <li><a href="#Contact">CONTACT</a></li>
         <li><a href="#Projects">PROJECTS</a></li>
@@ -50,10 +56,9 @@
 </nav>
 
 <body class="body">
-
 <div class="header">
     <h1 id="title-text">Lewis Johnson</h1>
-    <video autoplay loop >
+    <video autoplay loop>
         <source src="assets/2017-09-06_23-02-24.mp4" type="video/mp4">
     </video>
     <div class="image-overlay"></div>

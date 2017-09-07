@@ -107,7 +107,7 @@ ul {
 }
 
 /* Mobile Header */
-.nav-bar-mobile {
+.nav-mobile {
     position: fixed;
     background: black;
     z-index: 3;
@@ -118,7 +118,7 @@ ul {
     border-left: 2px solid white;
 }
 
-.nav-bar-mobile.open {
+.nav-mobile.open {
     margin-left: -250px;
 }
 
@@ -165,7 +165,7 @@ ul {
 }
 
 /* Header */
-.nav-bar {
+.nav-desktop {
     position: fixed;
     top: 0;
     left: 0;
@@ -175,18 +175,18 @@ ul {
     transition: margin, background 0.3s ease;
 }
 
-.nav-bar ul {
+.nav-desktop ul {
     margin: 0;
     overflow: hidden;
 }
 
-.nav-bar ul li {
+.nav-desktop ul li {
     margin: 0;
     display: inline-block;
     float: right;
 }
 
-.nav-bar ul li a {
+.nav-desktop ul li a {
     color: white;
     font-weight: 300;
     text-decoration: none;
@@ -198,7 +198,7 @@ ul {
     transition: all 0.5s ease;
 }
 
-.nav-bar ul > :first-child a {
+.nav-desktop ul > :first-child a {
     padding: 0.7rem 6.1rem 2rem 1.5rem;
     margin: 1.2rem 1rem 1rem;
     border: 2px solid white;
@@ -206,7 +206,7 @@ ul {
     max-height: 30px;
 }
 
-.nav-bar ul > :first-child :hover {
+.nav-desktop ul > :first-child :hover {
     background: white;
 }
 
@@ -225,7 +225,7 @@ ul {
     transition: 0.3s opacity;
 }
 
-.nav-bar ul li.selected a {
+.nav-desktop ul li.selected a {
     color: #b9b9b9;
 }
 
@@ -362,15 +362,9 @@ ul.source-stats li h2 {
     margin: 0;
 }
 
-@media screen and (min-width: 701px) {
-    .hamburger-btn {
-        display: none
-    }
-}
-
 @media screen and (max-width: 700px) {
 
-    .nav-bar {
+    .nav-desktop {
         position: fixed;
         cursor: pointer;
         left: 100%;
@@ -378,34 +372,6 @@ ul.source-stats li h2 {
         z-index: 4;
     }
 
-    .nav-bar ul {
-        margin-top: 5rem;
-    }
-
-    .nav-bar ul li {
-        display: block;
-        float: none;
-    }
-
-    .nav-bar ul > :first-child a{
-        margin-left: 0;
-    }
-
-    .nav-bar ul li a {
-        display: block;
-        padding: 0.5rem 0;
-        margin: 0;
-    }
-
-    .nav-image img {
-        width: 300%;
-        left: -126vw;
-        top: -22%;
-    }
-
-    .nav-image h1 {
-        top: 0;
-    }
 
     .card {
         margin: 1rem;
