@@ -364,22 +364,18 @@ ul.source-stats li h2 {
 
 @media screen and (max-width: 700px) {
 
-    .nav-desktop {
-        position: fixed;
-        cursor: pointer;
-        left: 100%;
-        margin-top: 10px;
-        z-index: 4;
+    .nav-desktop{
+        display: none;
     }
 
+    .nav-mobile {
+        display: block;
+    }
 
     .card {
         margin: 1rem;
     }
 
-    .nav-bar-mobile-overlay {
-        display: block;
-    }
 
     /* Fix that shit up there */
     .main-content {

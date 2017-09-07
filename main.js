@@ -1,3 +1,10 @@
+var app = new Vue({
+    el: '#portfolio-app',
+    data: {
+        message: 'Hello Vue!'
+    }
+})
+
 var nav_bar_ul, ham_el1, ham_el2, ham_el3, header_dev_text;
 
 var arrindex = 0;
@@ -93,7 +100,7 @@ $(document).ready(function () {
         }
 
         if(height > 443) {
-            $(".nav-desktop").css("background", 'black');
+            $("nav").css("background", 'black');
             $(".nav-bar-mobile-overlay").css("background", 'black');
         }
          else{
