@@ -1,10 +1,3 @@
-var app = new Vue({
-    el: '#portfolio-app',
-    data: {
-        message: 'Hello Vue!'
-    }
-})
-
 var nav_bar_ul, ham_el1, ham_el2, ham_el3, header_dev_text;
 
 var arrindex = 0;
@@ -47,10 +40,10 @@ $(document).ready(function () {
         $(".nav-desktop").css("margin-left", '0px');
 
         //Animate hamburger divs
-        ham_el1.rotate(0);
+        ham_el1.css("transform", "rotate(0deg)");
         ham_el1.toggleClass("on");
         ham_el2.toggleClass("on");
-        ham_el3.rotate(0);
+        ham_el3.css("transform", "rotate(0deg)");
         ham_el3.toggleClass("on");
 
         //Drag up navigation bar
@@ -60,11 +53,12 @@ $(document).ready(function () {
     }
 
     function showHamburgerMenu() {
-//Animate hamburger divs
-        ham_el1.rotate(45);
+
+        //Animate hamburger divs
+        ham_el1.css("transform", "rotate(45deg)");
         ham_el1.toggleClass("on");
         ham_el2.toggleClass("on");
-        ham_el3.rotate(-45);
+        ham_el3.css("transform", "rotate(-45deg)");
         ham_el3.toggleClass("on");
 
         $('#hamburger').css("margin-left", '-250px');
@@ -83,27 +77,27 @@ $(document).ready(function () {
         }
     }
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var height = $(window).scrollTop();
-
-        if(height > 120) {
+        var k = $(".header");
+        if (height > $(".header").css("height") / 2) {
             $("#title-text").css({
-                'opacity' : '0',
-                'top' : '-12%'
+                'opacity': '0',
+                'top': '-12%'
             });
         }
         else {
             $("#title-text").css({
-                'opacity' : '1',
-                'top' : '0%'
+                'opacity': '1',
+                'top': '0%'
             });
         }
 
-        if(height > 443) {
+        if (height > $(".header").css("height")) {
             $("nav").css("background", 'black');
             $(".nav-bar-mobile-overlay").css("background", 'black');
         }
-         else{
+        else {
             $(".nav-desktop").css("background", 'transparent');
             $(".nav-bar-mobile-overlay").css("background", 'transparent');
         }
@@ -114,14 +108,13 @@ $(document).ready(function () {
     for (var i = 0; i < lang_stats.length; ++i) {
         var list = lang_stats[i];
 
-        for (var j = 0; j < list.children.length; j++)
-        {
+        for (var j = 0; j < list.children.length; j++) {
             list.children[j].style.width = list.children[j].dataset.percentage;
         }
     }
 
     var helloHeader = $("#hello");
-    if(helloHeader !== null){
+    if (helloHeader !== null) {
         hello();
     }
 
